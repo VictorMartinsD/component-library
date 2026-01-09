@@ -1,0 +1,132 @@
+:root {
+  --brand-light: #59b2ff;
+  --input-base: #1c1f21;
+  --input-stroke: #363b40;
+  --shape-background: #131516;
+  --text-heading: #f9f9f9;
+  --text-body: #869198;
+  --open-sans: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: var(--shape-background);
+  color: var(--text-body);
+  font-family: var(--open-sans);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main-header {
+  padding: 60px 0;
+  border-bottom: 1px solid var(--input-stroke);
+  margin-bottom: 40px;
+}
+
+.main-header h1 {
+  color: var(--text-heading);
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.main-header h1 span {
+  color: var(--brand-light);
+}
+
+.grid-section {
+  display: flex;
+  gap: 40px;
+}
+
+.category {
+  flex: 1;
+}
+
+.category h2 {
+  color: var(--text-heading);
+  font-size: 20px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.category-desc {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.link-list li a {
+  display: block;
+  padding: 16px;
+  background-color: var(--input-base);
+  border: 1px solid var(--input-stroke);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.link-list li a:hover {
+  border-color: var(--brand-light);
+  transform: translateY(-2px);
+  background-color: #212427;
+}
+
+.link-list li a strong {
+  display: block;
+  color: var(--brand-light);
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.link-list li a span {
+  font-size: 13px;
+  color: var(--text-body);
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.repo-link {
+  font-size: 13px;
+  color: var(--brand-light);
+  border: 1px solid var(--brand-light);
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.repo-link:hover {
+  background-color: var(--brand-light);
+  color: var(--shape-background);
+}
+
+.main-footer {
+  margin-top: 80px;
+  padding: 40px 0;
+  text-align: center;
+  border-top: 1px solid var(--input-stroke);
+  font-size: 12px;
+}
+
+@media (max-width: 600px) {
+  .grid-section {
+    flex-direction: column;
+  }
+}

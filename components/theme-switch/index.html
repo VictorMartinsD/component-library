@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theme Switch - Component Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../../reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="theme-switch-container">
+      <label>Estilo</label>
+      <div class="switch-wrapper">
+        <button
+          type="button"
+          class="dark-light"
+          id="theme-toggle"
+          aria-label="Alternar tema"
+        >
+          <span class="toggle-circle"></span>
+        </button>
+        <p id="theme-text">Escuro</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

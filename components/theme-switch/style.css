@@ -1,0 +1,83 @@
+:root {
+  --brand-light: #59b2ff;
+  --input-base: #1c1f21;
+  --input-stroke: #363b40;
+  --text-heading: #f9f9f9;
+  --text-body: #869198;
+  --open-sans: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: #131516;
+  color: var(--text-heading);
+  font-family: var(--open-sans);
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.theme-switch-container label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-body);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.switch-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+#theme-text {
+  font-size: 16px;
+  font-weight: 600;
+  min-width: 60px;
+}
+
+/* O Botão */
+.dark-light {
+  cursor: pointer;
+  width: 64px;
+  height: 32px;
+  border-radius: 999px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  background-color: var(--input-base);
+  border: 1px solid var(--input-stroke);
+  transition: all 0.2s ease;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+/* Mantém a borda cinza no hover, apenas mudando levemente a intensidade se desejar, 
+   ou deixe como var(--input-stroke) para ser totalmente estática */
+.dark-light:hover {
+  border-color: var(--input-stroke);
+  filter: brightness(
+    1.2
+  ); /* Um efeito sutil de brilho sem mudar a cor da borda */
+}
+
+.toggle-circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: var(--input-stroke);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s;
+}
+
+/* Estado Ativo */
+.dark-light.active {
+  background-color: var(--brand-light);
+  border-color: var(--input-stroke);
+}
+
+.dark-light.active .toggle-circle {
+  background-color: var(--text-heading);
+  transform: translateX(30px);
+}
