@@ -2,10 +2,9 @@
 
 Este repositório é uma biblioteca pessoal de **estudo ativo** e consulta técnica. O objetivo é documentar padrões de layout e componentes de interface, servindo como uma base de conhecimento para desenvolvimento front-end.
 
-## 🔗 Links Úteis
+## 🔗 Link
 
 [![Visualizar Projeto](https://img.shields.io/badge/Acessar%20Deploy-Github%20Pages-blue?style=for-the-badge)](https://victormartinsd.github.io/component-library/)
-[![GitHub Repo](https://img.shields.io/badge/Código%20Fonte-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/victormartinsd/component-library)
 
 ---
 
