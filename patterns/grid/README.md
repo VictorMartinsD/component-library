@@ -4,15 +4,6 @@ Este pattern documenta as técnicas mais eficientes de alinhamento e distribuiç
 
 ---
 
-## 🖼️ Preview: Centralização e Espaçamento
-
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/cf591f19-09f4-402f-bc69-c5531b67be46" alt="Exemplo de alinhamento Flexbox" width="350">
-  <p><i>Aplicação prática: Botão e texto alinhados verticalmente com gap controlado.</i></p>
-</div>
-
----
-
 ## 🧠 Estudo Ativo: Conceitos Chave
 
 ### 1. Centralização Absoluta
