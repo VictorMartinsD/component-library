@@ -3,6 +3,7 @@
   --input-base: #1c1f21;
   --input-stroke: #363b40;
   --text-heading: #f9f9f9;
+  --text-body: #869198;
   --open-sans: "Open Sans", sans-serif;
 }
 
@@ -10,34 +11,116 @@ body {
   background-color: #131516;
   color: var(--text-heading);
   font-family: var(--open-sans);
-  padding: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.lab-container {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 50px 20px 100px;
+  box-sizing: border-box;
+}
+
+.code-card:last-child {
+  margin-bottom: 0;
+}
+
+/* Estrutura do Lab */
+.lab-container {
+  max-width: 800px;
+  width: 100%;
+}
+
+.preview-box {
+  background: #0d0f10;
+  border: 1px solid var(--input-stroke);
+  border-radius: 12px;
+  padding: 80px 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.intro h2 {
+  color: var(--brand-light);
+  margin-bottom: 8px;
+  font-size: 24px;
+}
+.intro p {
+  color: var(--text-body);
+  font-size: 15px;
+  margin-bottom: 32px;
 }
 
 .flex-container {
   display: flex;
-
-  /* PROPRIEDADES PARA VOCÊ TESTAR: */
-  justify-content: center; /* Tente: space-between, space-around, flex-start */
-  align-items: center; /* Tente: flex-start, flex-end */
+  justify-content: center;
+  align-items: center;
   gap: 20px;
-
   background-color: var(--input-base);
   border: 1px solid var(--input-stroke);
   border-radius: 12px;
   padding: 30px;
   width: 100%;
   max-width: 600px;
-  min-height: 200px; /* Altura mínima para ver o alinhamento vertical */
+  min-height: 200px;
 }
 
-/* Itens Internos */
 .item {
   width: 80px;
   height: 80px;
   background-color: #212427;
   border: 2px solid var(--brand-light);
   border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* Cards de Código */
+.code-card {
+  background: #1c1f21;
+  border: 1px solid var(--input-stroke);
+  border-radius: 8px;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background: #292d31;
+  border-bottom: 1px solid var(--input-stroke);
+  font-size: 12px;
+  color: var(--brand-light);
+}
+
+.code-header button {
+  background: var(--brand-light);
+  border: none;
+  border-radius: 4px;
+  padding: 4px 12px;
+  color: #131516;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+pre {
+  margin: 0;
+  padding: 20px;
+  overflow-x: auto;
+  background: #131516;
+}
+
+code {
+  font-family: "Consolas", monospace;
+  font-size: 14px;
+  color: #c8cdd0;
+  line-height: 1.6;
 }

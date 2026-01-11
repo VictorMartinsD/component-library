@@ -81,3 +81,156 @@ body {
   background-color: var(--text-heading);
   transform: translateX(30px);
 }
+
+/* Container que agrupa o preview e o código */
+.lab-item {
+  width: 100%;
+  max-width: 600px;
+  background: #1c1f21;
+  border-radius: 12px;
+  border: 1px solid #363b40;
+  overflow: hidden;
+}
+
+/* Área onde o switch fica centralizado */
+.preview-box {
+  padding: 60px;
+  display: flex;
+  justify-content: center;
+  background-color: #131516;
+  border-bottom: 1px solid #363b40;
+}
+
+/* Área de texto e códigos */
+.docs-box {
+  padding: 24px;
+}
+
+.docs-box h3 {
+  margin-bottom: 8px;
+  color: var(--brand-light);
+}
+.docs-box p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Estilização das caixas de código */
+.code-wrapper {
+  background: #0d0f10;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #363b40;
+}
+
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background: #212427;
+  font-size: 12px;
+  color: var(--brand-light);
+  border-bottom: 1px solid #363b40;
+}
+
+.code-header button {
+  background: transparent;
+  border: none;
+  color: var(--text-body);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.code-header button:hover {
+  color: white;
+}
+
+pre {
+  padding: 16px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  overflow-x: auto;
+  color: #c8cdd0;
+}
+
+/* Layout Geral do Lab */
+.lab-container {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.preview-box {
+  background: #0d0f10;
+  border: 1px solid var(--input-stroke);
+  border-radius: 12px;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.intro {
+  margin-bottom: 32px;
+}
+.intro h2 {
+  color: var(--brand-light);
+  margin-bottom: 8px;
+}
+.intro p {
+  color: var(--text-body);
+  font-size: 15px;
+}
+
+/* Cards de Código */
+.code-card {
+  background: #1c1f21;
+  border: 1px solid var(--input-stroke);
+  border-radius: 8px;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background: #292d31;
+  border-bottom: 1px solid var(--input-stroke);
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--brand-light);
+}
+
+.code-header button {
+  background: var(--brand-light);
+  border: none;
+  border-radius: 4px;
+  padding: 4px 12px;
+  color: #131516;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 11px;
+  transition: opacity 0.2s;
+}
+
+.code-header button:hover {
+  opacity: 0.8;
+}
+
+pre {
+  margin: 0;
+  padding: 20px;
+  overflow-x: auto;
+  max-height: 400px;
+  background: #131516;
+}
+
+code {
+  font-family: "Consolas", "Monaco", monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #c8cdd0;
+}
