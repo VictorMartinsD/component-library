@@ -1,19 +1,35 @@
-/* Modern Reset */
+/* Modern Reset & Design Tokens */
 
-/* 1. Define o box-sizing para facilitar o cálculo de tamanhos */
+:root {
+  /* Colors */
+  --brand-light: #59b2ff;
+  --input-base: #1c1f21;
+  --input-stroke: #363b40;
+  --shape-background: #131516;
+  --text-heading: #f9f9f9;
+  --text-body: #869198;
+
+  /* Typography */
+  --open-sans: "Open Sans", sans-serif;
+
+  /* Border Radius (Tokens que adicionamos) */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 999px;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* 2. Remove margens e paddings padrão de tudo */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* 3. Melhora a altura e o scroll do corpo */
 html,
 body {
   height: 100%;
@@ -22,9 +38,11 @@ body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background-color: var(--shape-background);
+  color: var(--text-body);
+  font-family: var(--open-sans);
 }
 
-/* 4. Faz as imagens serem responsivas por padrão */
 img,
 picture,
 video,
@@ -32,11 +50,8 @@ canvas,
 svg {
   display: block;
   max-width: 100%;
-  height: auto;
-  object-fit: cover;
 }
 
-/* 5. Remove estilos de lista e links */
 ul,
 ol {
   list-style: none;
@@ -47,17 +62,9 @@ a {
   color: inherit;
 }
 
-/* 6. Reseta fontes de formulários (que não herdam o body por padrão) */
 input,
 button,
 textarea,
 select {
   font: inherit;
-}
-
-/* 7. Evita que textos fiquem muito grandes no mobile */
-html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
 }

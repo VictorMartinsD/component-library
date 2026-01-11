@@ -1,21 +1,26 @@
-:root {
-  --brand-light: #59b2ff;
-  --input-base: #1c1f21;
-  --input-stroke: #363b40;
-  --text-heading: #f9f9f9;
-  --text-body: #869198;
-  --open-sans: "Open Sans", sans-serif;
+/* Layout Geral do Lab - O Corretor de Alinhamento */
+.lab-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px 100px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-body {
-  background-color: #131516;
-  color: var(--text-heading);
-  font-family: var(--open-sans);
-  padding: 50px;
+/* Preview Box - Garante que o componente não cole nas bordas do container */
+.preview-box {
+  background: #0d0f10;
+  border: 1px solid var(--input-stroke);
+  border-radius: var(--radius-lg);
+  padding: 80px 20px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  width: 100%;
 }
 
+/* Component Styles */
 .theme-switch-container label {
   font-size: 14px;
   font-weight: 600;
@@ -35,14 +40,14 @@ body {
   font-size: 16px;
   font-weight: 600;
   min-width: 60px;
+  color: var(--text-heading);
 }
 
-/* O Botão */
 .dark-light {
   cursor: pointer;
   width: 64px;
   height: 32px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   padding: 4px;
   display: flex;
   align-items: center;
@@ -50,17 +55,11 @@ body {
   border: 1px solid var(--input-stroke);
   transition: all 0.2s ease;
   appearance: none;
-  -webkit-appearance: none;
   outline: none;
 }
 
-/* Mantém a borda cinza no hover, apenas mudando levemente a intensidade se desejar, 
-   ou deixe como var(--input-stroke) para ser totalmente estática */
 .dark-light:hover {
-  border-color: var(--input-stroke);
-  filter: brightness(
-    1.2
-  ); /* Um efeito sutil de brilho sem mudar a cor da borda */
+  filter: brightness(1.2);
 }
 
 .toggle-circle {
@@ -71,10 +70,8 @@ body {
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s;
 }
 
-/* Estado Ativo */
 .dark-light.active {
   background-color: var(--brand-light);
-  border-color: var(--input-stroke);
 }
 
 .dark-light.active .toggle-circle {
@@ -82,112 +79,21 @@ body {
   transform: translateX(30px);
 }
 
-/* Container que agrupa o preview e o código */
-.lab-item {
-  width: 100%;
-  max-width: 600px;
-  background: #1c1f21;
-  border-radius: 12px;
-  border: 1px solid #363b40;
-  overflow: hidden;
-}
-
-/* Área onde o switch fica centralizado */
-.preview-box {
-  padding: 60px;
-  display: flex;
-  justify-content: center;
-  background-color: #131516;
-  border-bottom: 1px solid #363b40;
-}
-
-/* Área de texto e códigos */
-.docs-box {
-  padding: 24px;
-}
-
-.docs-box h3 {
-  margin-bottom: 8px;
-  color: var(--brand-light);
-}
-.docs-box p {
-  font-size: 14px;
-  margin-bottom: 20px;
-  line-height: 1.5;
-}
-
-/* Estilização das caixas de código */
-.code-wrapper {
-  background: #0d0f10;
-  border-radius: 8px;
-  margin-bottom: 16px;
-  border: 1px solid #363b40;
-}
-
-.code-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 16px;
-  background: #212427;
-  font-size: 12px;
-  color: var(--brand-light);
-  border-bottom: 1px solid #363b40;
-}
-
-.code-header button {
-  background: transparent;
-  border: none;
-  color: var(--text-body);
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.code-header button:hover {
-  color: white;
-}
-
-pre {
-  padding: 16px;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 13px;
-  overflow-x: auto;
-  color: #c8cdd0;
-}
-
-/* Layout Geral do Lab */
-.lab-container {
-  max-width: 800px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.preview-box {
-  background: #0d0f10;
-  border: 1px solid var(--input-stroke);
-  border-radius: 12px;
-  padding: 80px 20px;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-}
-
-.intro {
-  margin-bottom: 32px;
-}
+/* Docs UI */
 .intro h2 {
   color: var(--brand-light);
   margin-bottom: 8px;
 }
+
 .intro p {
   color: var(--text-body);
-  font-size: 15px;
+  margin-bottom: 32px;
 }
 
-/* Cards de Código */
 .code-card {
-  background: #1c1f21;
+  background: var(--input-base);
   border: 1px solid var(--input-stroke);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   margin-bottom: 24px;
   overflow: hidden;
 }
@@ -200,37 +106,28 @@ pre {
   background: #292d31;
   border-bottom: 1px solid var(--input-stroke);
   font-size: 12px;
-  font-weight: bold;
   color: var(--brand-light);
 }
 
 .code-header button {
   background: var(--brand-light);
   border: none;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   padding: 4px 12px;
   color: #131516;
   font-weight: bold;
   cursor: pointer;
-  font-size: 11px;
-  transition: opacity 0.2s;
-}
-
-.code-header button:hover {
-  opacity: 0.8;
 }
 
 pre {
   margin: 0;
   padding: 20px;
-  overflow-x: auto;
-  max-height: 400px;
   background: #131516;
+  overflow-x: auto;
 }
 
 code {
-  font-family: "Consolas", "Monaco", monospace;
+  font-family: "Consolas", monospace;
   font-size: 14px;
-  line-height: 1.6;
   color: #c8cdd0;
 }

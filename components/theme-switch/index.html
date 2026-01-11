@@ -36,8 +36,8 @@
         <div class="intro">
           <h2>Dark/Light Mode Switch</h2>
           <p>
-            Um alternador de tema minimalista com transição suave e feedback de
-            texto dinâmico.
+            Alternador de tema minimalista com transição suave e feedback
+            dinâmico.
           </p>
         </div>
 
@@ -50,7 +50,7 @@
 &lt;div class="theme-switch-container"&gt;
   &lt;label&gt;Estilo&lt;/label&gt;
   &lt;div class="switch-wrapper"&gt;
-    &lt;button type="button" class="dark-light" id="theme-toggle" aria-label="Alternar tema"&gt;
+    &lt;button type="button" class="dark-light" id="theme-toggle"&gt;
       &lt;span class="toggle-circle"&gt;&lt;/span&gt;
     &lt;/button&gt;
     &lt;p id="theme-text"&gt;Escuro&lt;/p&gt;
@@ -64,53 +64,13 @@
             <button onclick="copyCode('css-content')">Copiar</button>
           </div>
           <pre><code id="css-content">
-:root {
-  --brand-light: #59b2ff;
-  --input-base: #1c1f21;
-  --input-stroke: #363b40;
-  --text-heading: #f9f9f9;
-  --text-body: #869198;
-}
-
-.theme-switch-container label {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text-body);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.switch-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 8px;
-}
-
-#theme-text {
-  font-size: 16px;
-  font-weight: 600;
-  min-width: 60px;
-}
-
 .dark-light {
-  cursor: pointer;
   width: 64px;
   height: 32px;
-  border-radius: 999px;
-  padding: 4px;
-  display: flex;
-  align-items: center;
+  border-radius: var(--radius-pill);
   background-color: var(--input-base);
   border: 1px solid var(--input-stroke);
   transition: all 0.2s ease;
-  appearance: none;
-  outline: none;
-}
-
-.dark-light:hover {
-  border-color: var(--input-stroke);
-  filter: brightness(1.2);
 }
 
 .toggle-circle {
@@ -118,7 +78,7 @@
   height: 22px;
   border-radius: 50%;
   background-color: var(--input-stroke);
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .dark-light.active {
@@ -130,29 +90,9 @@
   transform: translateX(30px);
 }</code></pre>
         </div>
-
-        <div class="code-card">
-          <div class="code-header">
-            <span>JavaScript</span>
-            <button onclick="copyCode('js-content')">Copiar</button>
-          </div>
-          <pre><code id="js-content">
-const themeToggle = document.getElementById("theme-toggle");
-const themeText = document.getElementById("theme-text");
-
-themeToggle.addEventListener("click", () => {
-  themeToggle.classList.toggle("active");
-
-  if (themeToggle.classList.contains("active")) {
-    themeText.textContent = "Claro";
-  } else {
-    themeText.textContent = "Escuro";
-  }
-});</code></pre>
-        </div>
       </section>
+      <div style="height: 1px; width: 100%"></div>
     </main>
-
     <script src="script.js"></script>
   </body>
 </html>

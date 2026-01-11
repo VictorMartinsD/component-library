@@ -1,19 +1,4 @@
-:root {
-  --brand-light: #59b2ff;
-  --input-base: #1c1f21;
-  --input-stroke: #363b40;
-  --shape-background: #131516;
-  --text-heading: #f9f9f9;
-  --text-body: #869198;
-  --open-sans: "Open Sans", sans-serif;
-}
-
-body {
-  background-color: var(--shape-background);
-  color: var(--text-body);
-  font-family: var(--open-sans);
-  line-height: 1.6;
-}
+/* UI Lab Index Styles */
 
 .container {
   max-width: 900px;
@@ -21,10 +6,19 @@ body {
   padding: 0 20px;
 }
 
+/* Header Section */
 .main-header {
   padding: 60px 0;
   border-bottom: 1px solid var(--input-stroke);
   margin-bottom: 40px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .main-header h1 {
@@ -38,6 +32,21 @@ body {
   color: var(--brand-light);
 }
 
+.repo-link {
+  font-size: 13px;
+  color: var(--brand-light);
+  border: 1px solid var(--brand-light);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s;
+}
+
+.repo-link:hover {
+  background-color: var(--brand-light);
+  color: var(--shape-background);
+}
+
+/* Categories Grid */
 .grid-section {
   display: flex;
   gap: 40px;
@@ -61,6 +70,7 @@ body {
   margin-bottom: 20px;
 }
 
+/* Component Links */
 .link-list {
   display: flex;
   flex-direction: column;
@@ -73,7 +83,7 @@ body {
   padding: 16px;
   background-color: var(--input-base);
   border: 1px solid var(--input-stroke);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   transition: all 0.2s ease;
 }
 
@@ -95,28 +105,7 @@ body {
   color: var(--text-body);
 }
 
-.header-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.repo-link {
-  font-size: 13px;
-  color: var(--brand-light);
-  border: 1px solid var(--brand-light);
-  padding: 6px 12px;
-  border-radius: 4px;
-  transition: all 0.2s;
-}
-
-.repo-link:hover {
-  background-color: var(--brand-light);
-  color: var(--shape-background);
-}
-
+/* Footer Section */
 .main-footer {
   margin-top: 80px;
   padding: 40px 0;
@@ -125,6 +114,7 @@ body {
   font-size: 12px;
 }
 
+/* Responsive Breakpoints */
 @media (max-width: 600px) {
   .grid-section {
     flex-direction: column;
