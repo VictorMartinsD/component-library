@@ -39,8 +39,6 @@ body {
   margin-bottom: 24px;
 }
 
-/* --- ESTILOS DOS COMPONENTES DE GRID --- */
-
 /* 1. Holy Grail */
 .grid-holy-grail {
   display: grid;
@@ -108,7 +106,7 @@ footer {
   grid-column: span 2;
 }
 
-/* --- PADRÃO MESTRE: CARDS DE CÓDIGO --- */
+/* Cards de Código */
 .code-card {
   background: #1c1f21;
   border: 1px solid var(--input-stroke);
@@ -145,6 +143,7 @@ pre {
   overflow-x: auto;
   background: #131516;
 }
+
 code {
   font-family: "Consolas", monospace;
   font-size: 14px;

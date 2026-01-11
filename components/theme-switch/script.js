@@ -1,4 +1,4 @@
-// 1. Variáveis do Switch
+// 1. Lógica do Switch
 const themeToggle = document.getElementById("theme-toggle");
 const themeText = document.getElementById("theme-text");
 
@@ -23,25 +23,20 @@ function copyCode(id) {
   navigator.clipboard
     .writeText(textToCopy)
     .then(() => {
-      // Feedback visual no botão
-      // Buscamos o botão que tem o onclick com o ID específico
       const btn = document.querySelector(`button[onclick="copyCode('${id}')"]`);
 
       if (btn) {
         const originalText = btn.textContent;
         btn.textContent = "Copiado!";
-        btn.style.color = "#59ff91"; // Verde para sucesso
+        btn.style.color = "#59ff91";
 
         setTimeout(() => {
           btn.textContent = originalText;
-          btn.style.color = ""; // Volta ao padrão
+          btn.style.color = "";
         }, 2000);
       }
     })
     .catch((err) => {
       console.error("Erro ao copiar: ", err);
-      alert(
-        "Erro ao copiar. Verifique se seu navegador permite acesso à área de transferência."
-      );
     });
 }

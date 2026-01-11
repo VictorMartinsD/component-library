@@ -23,16 +23,6 @@ body {
   box-sizing: border-box;
 }
 
-.code-card:last-child {
-  margin-bottom: 0;
-}
-
-/* Estrutura do Lab */
-.lab-container {
-  max-width: 800px;
-  width: 100%;
-}
-
 .preview-box {
   background: #0d0f10;
   border: 1px solid var(--input-stroke);
@@ -48,12 +38,14 @@ body {
   margin-bottom: 8px;
   font-size: 24px;
 }
+
 .intro p {
   color: var(--text-body);
   font-size: 15px;
   margin-bottom: 32px;
 }
 
+/* Componente Flexbox */
 .flex-container {
   display: flex;
   justify-content: center;

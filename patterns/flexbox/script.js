@@ -1,4 +1,3 @@
-// 1. Função Global de Cópia (Padrão Mestre)
 function copyCode(id) {
   const element = document.getElementById(id);
   if (!element) return;
